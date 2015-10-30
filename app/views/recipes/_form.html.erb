@@ -1,0 +1,21 @@
+<%= form_for @recipe do |f| %>
+<%= f.label :name, "Recipe Name:", class: "formleft" %>
+<%= f.text_field :name, class: "formright" %>
+<br>
+<br>
+<%= f.label :name, "Category:", class: "formleft" %>
+<%= f.select :name, Category.all.map { |c| [c.name, c.id], class: "formright" %>
+<br>
+<br>
+<%= f.label :name, "Vegetarian:", class: "formleft" %>
+<%= f.check_box :name,  class: "formright" %>
+<br>
+<br>
+<%= f.label :name, "Ingredients:", class: "formleft" %>
+<%= f.text_field :name, class: "formright" %>
+<br>
+<br>
+<center>
+  <%= f.submit button_text, class: "bueton" %>
+</center>
+<% end %>

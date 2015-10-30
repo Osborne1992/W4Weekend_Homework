@@ -18,7 +18,21 @@ li {
   display: inline;
 }
 
+form {
+  display: inline-block;
+}
 
+.formleft {
+  padding-left: 200px;
+  width: 200px;
+  float: left;
+}
+
+.formright {
+  padding-right: 200px;
+  width: 200px;
+  float: right;
+}
 
 
 
