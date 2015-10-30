@@ -1,6 +1,6 @@
 class Recipe < ActiveRecord::Base
 
-  has_many :ingredients, dependent: :destroy
+  has_and_belongs_to_many :ingredients
 
   belongs_to :categories
 
