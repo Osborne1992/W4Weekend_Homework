@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CookbookAppHw</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<header>
+  <center>
+    <br>
+      <h1>Cookbook App</h1>
+    <%= render partial: "layouts/menu" %>
+    <br>
+  </center>
+</header>
+<body>
+
+  <%= yield %>
+
+</body>
+</html>
