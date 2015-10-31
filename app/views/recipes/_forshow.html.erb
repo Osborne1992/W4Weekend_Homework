@@ -4,7 +4,7 @@
   <br>
   <p>Category: <%= @recipe.category.try(:name) %></p>
   <p>Vegetarian: <%= @recipe.vegetarian %></p>
-  <p>Ingredients: <%= @recipe.ingredients.each { |i| i.name } %></p>
+  <p>Ingredients: <%= @recipe.ingredients.each { |i| i.name} %></p>
   <br>
   <center>
     <strong>Instructions:</strong>
