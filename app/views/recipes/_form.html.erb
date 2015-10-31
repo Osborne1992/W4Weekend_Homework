@@ -1,6 +1,6 @@
 <%= form_for @recipe do |f| %>
 <div class='mfleft'><%= f.label :name, "Recipe Name:" %></div>
-<div class='mfright'><%= f.text_field :name %></div>
+<div class='mfright'><%= f.text_field :name, size: 70 %></div>
 <br>
 <br>
 <div class='mfleft'><%= f.label :category_id, "Category:" %></div>
