@@ -12,17 +12,11 @@
 <br>
 <br>
 <%= f.label :ingredient_ids, "Ingredients:", class: "formleft" %>
-<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name, class: "formright" %>
+<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name, class: "checkboxcontainer" %>
 <br>
 <br>
 <%= f.label :instructions, "Instructions:", class: "formleft" %>
-<%= f.text_area :instructions, cols: "20", rows: "10", class: "formright" %>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<%= f.text_area :instructions, rows: "10", class: "formright" %>
 <br>
 <br>
 <center>

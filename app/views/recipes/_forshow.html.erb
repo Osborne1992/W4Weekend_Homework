@@ -2,9 +2,11 @@
   <h2><%= @recipe.name %></h2>
 </center>
   <br>
-  <p>Category: <%= @recipe.category.try(:name) %></p>
-  <p>Vegetarian: <%= @recipe.vegetarian %></p>
-  <p>Ingredients: <%= @recipe.ingredients.each { |i| i.name } %></p>
+  <p><strong>Category:</strong> <%= @recipe.category.try(:name) %></p>
+  <p><strong>Vegetarian:</strong> <%= @recipe.vegetarian %></p>
+  <p><strong>Ingredients:</strong> <% @recipe.ingredients.each do |ingredient| %>
+                  <%= simple_format ingredient.name %>
+                  <% end %></p>
   <br>
   <center>
     <strong>Instructions:</strong>

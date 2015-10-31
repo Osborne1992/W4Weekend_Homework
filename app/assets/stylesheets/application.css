@@ -1,6 +1,5 @@
 body {
-  width: 100%;
-  max-width: 960px;
+  width: 960px;
   font-family: Arial, Helvetica;
   margin: 0 auto 0 auto;
 }
@@ -24,14 +23,16 @@ form {
 
 .formleft {
   padding-left: 200px;
-  width: 200px;
+  width: 150px;
   float: left;
 }
 
 .formright {
-  padding-right: 200px;
-  width: 200px;
-  float: right;
+  width: 300px;
+}
+
+.checkboxcontainer input {
+  display: inline;
 }
 
 .imgdelbut {
