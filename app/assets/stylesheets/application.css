@@ -31,8 +31,14 @@ form {
   width: 300px;
 }
 
-.checkboxcontainer input {
-  display: inline;
+.fcbright {
+  display: inline-block;
+  width: 300px;
+  float: right;
+}
+
+.ingredientlist {
+  
 }
 
 .imgdelbut {

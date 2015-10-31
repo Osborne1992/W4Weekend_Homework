@@ -12,7 +12,7 @@
 <br>
 <br>
 <%= f.label :ingredient_ids, "Ingredients:", class: "formleft" %>
-<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name, class: "checkboxcontainer" %>
+<div class='fcbright'><%= f.collection_check_boxes :ingredient_ids, Ingredient.all.order(:name), :id, :name %></div>
 <br>
 <br>
 <%= f.label :instructions, "Instructions:", class: "formleft" %>
