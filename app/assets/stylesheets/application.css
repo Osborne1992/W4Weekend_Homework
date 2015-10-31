@@ -34,6 +34,15 @@ form {
   float: right;
 }
 
+.ingdelbut {
+  background: url(http://i.imgur.com/HNReW2T.png);
+  background-size: 15px;
+  background-position: 0px 13px;
+  padding: 15px;
+  background-repeat: no-repeat;
+  border: none;
+}
+
 
 
 
