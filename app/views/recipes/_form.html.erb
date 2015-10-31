@@ -11,8 +11,8 @@
 <%= f.check_box :vegetarian,  class: "formright" %>
 <br>
 <br>
-<%= f.label :ingredients, "Ingredients:", class: "formleft" %>
-<%= f.text_field :ingredients_id, class: "formright" %>
+<%= f.label :ingredients_id, "Ingredients:", class: "formleft" %>
+<%= f.collection_check_boxes(:ingredients_id, Ingredient.all, :id, :name, class: "formright") %>
 <br>
 <br>
 <%= f.label :instructions, "Instructions:", class: "formleft" %>

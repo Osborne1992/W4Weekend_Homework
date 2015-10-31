@@ -2,9 +2,9 @@
   <h2><%= @recipe.name %></h2>
 </center>
   <br>
-  <p>Category: <%= @recipe.category_id %></p>
+  <p>Category: <%= @recipe.category.try(:name) %></p>
   <p>Vegetarian: <%= @recipe.vegetarian %></p>
-  <p>Ingredients: <%= @recipe.ingredients_id %></p>
+  <p>Ingredients: <%= Ingredient.all.name %></p>
   <br>
   <center>
     <strong>Instructions:</strong>

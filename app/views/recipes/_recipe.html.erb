@@ -1,4 +1,4 @@
   <h3>
-    <%= link_to("#{recipe.name}", recipe_path(recipe)) %>
+    <%= link_to("#{recipe.name} - #{recipe.category.try(:name)}", recipe_path(recipe)) %>
   </h3>
 <br>
