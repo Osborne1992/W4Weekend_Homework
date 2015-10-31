@@ -3,16 +3,20 @@
   <h2><%= @recipe.name %></h2>
 </center>
   <br>
+  <div class='recipeleft'>
   <p><strong>Category:</strong> <%= @recipe.category.try(:name) %></p>
   <p><strong>Vegetarian:</strong> <%= @recipe.vegetarian %></p>
   <p><strong>Ingredients:</strong> <% @recipe.ingredients.each do |ingredient| %>
                   <%= simple_format ingredient.name %>
                   <% end %></p>
+  </div>
   <br>
   <center>
     <strong>Instructions:</strong>
   </center>
+  <div class='recipemain'>
   <%= @recipe.instructions %>
+  </div>
   <br>
   <br>
   <center>

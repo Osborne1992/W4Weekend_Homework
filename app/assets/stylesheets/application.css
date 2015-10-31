@@ -27,6 +27,15 @@ form {
   display: inline-block;
 }
 
+.recipeleft {
+  padding-left: 300px;
+}
+
+.recipemain {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
 .mfleft {
   padding-left: 200px;
   width: 150px;
