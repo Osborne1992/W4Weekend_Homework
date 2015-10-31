@@ -3,16 +3,26 @@
 <%= f.text_field :name, class: "formright" %>
 <br>
 <br>
-<%= f.label :name, "Category:", class: "formleft" %>
-<%= f.select :name, Category.all.map { |c| [c.name, c.id], class: "formright" %>
+<%= f.label :category_id, "Category:", class: "formleft" %>
+<%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, class: "formright" %>
 <br>
 <br>
-<%= f.label :name, "Vegetarian:", class: "formleft" %>
-<%= f.check_box :name,  class: "formright" %>
+<%= f.label :vegetarian, "Vegetarian:", class: "formleft" %>
+<%= f.check_box :vegetarian,  class: "formright" %>
 <br>
 <br>
-<%= f.label :name, "Ingredients:", class: "formleft" %>
-<%= f.text_field :name, class: "formright" %>
+<%= f.label :ingredients, "Ingredients:", class: "formleft" %>
+<%= f.text_field :ingredients_id, class: "formright" %>
+<br>
+<br>
+<%= f.label :instructions, "Instructions:", class: "formleft" %>
+<%= f.text_area :instructions, cols: "20", rows: "10", class: "formright" %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <center>

@@ -1,0 +1,17 @@
+<center> 
+  <h2><%= @recipe.name %></h2>
+</center>
+  <br>
+  <p>Category: <%= @recipe.category_id %></p>
+  <p>Vegetarian: <%= @recipe.vegetarian %></p>
+  <p>Ingredients: <%= @recipe.ingredients_id %></p>
+  <br>
+  <center>
+    <strong>Instructions:</strong>
+  </center>
+  <%= @recipe.instructions %>
+  <br>
+  <br>
+  <center>
+    <%= link_to("Edit Recipe", edit_recipe_path(@recipe), class: "bueton") %> <%= button_to('Delete Recipe', recipe_path(@recipe), method: :delete, class: 'bueton', data:{confirm: 'Confirm Deleting'}) %>
+  </center>
