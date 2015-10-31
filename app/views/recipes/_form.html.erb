@@ -1,25 +1,25 @@
 <%= form_for @recipe do |f| %>
-<%= f.label :name, "Recipe Name:", class: "formleft" %>
-<%= f.text_field :name, class: "formright" %>
+<div class='mfleft'><%= f.label :name, "Recipe Name:" %></div>
+<div class='mfright'><%= f.text_field :name %></div>
 <br>
 <br>
-<%= f.label :category_id, "Category:", class: "formleft" %>
-<%= f.select :category_id, Category.all.map { |c| [c.name, c.id] }, class: "formright" %>
+<div class='mfleft'><%= f.label :category_id, "Category:" %></div>
+<div class='mfright'><%= f.select :category_id, Category.all.map { |c| [c.name, c.id] } %></div>
 <br>
 <br>
-<%= f.label :vegetarian, "Vegetarian:", class: "formleft" %>
-<%= f.check_box :vegetarian,  class: "formright" %>
+<div class='mfleft'><%= f.label :vegetarian, "Vegetarian:" %></div>
+<div class='mfright'><%= f.check_box :vegetarian %></div>
 <br>
 <br>
-<%= f.label :ingredient_ids, "Ingredients:", class: "formleft" %>
-<div class='fcbright'><%= f.collection_check_boxes :ingredient_ids, Ingredient.all.order(:name), :id, :name %></div>
+<div class='mfleft'><%= f.label :ingredient_ids, "Ingredients:" %></div>
+<div class='mfright'><%= f.collection_check_boxes :ingredient_ids, Ingredient.all.order(:name), :id, :name %></div>
 <br>
 <br>
-<%= f.label :instructions, "Instructions:", class: "formleft" %>
-<%= f.text_area :instructions, rows: "10", class: "formright" %>
+<div class='mfleft'><%= f.label :instructions, "Instructions:" %></div>
+<div class='mfright'><%= f.text_area :instructions, size: "70x10" %></div>
 <br>
 <br>
 <center>
-  <%= f.submit button_text, class: "bueton" %>
+  <%= f.submit button_text %>
 </center>
 <% end %>

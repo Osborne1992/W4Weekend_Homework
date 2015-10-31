@@ -7,6 +7,7 @@ body {
 .wrap {
   width: 960px;
   margin: 0 auto 0 auto;
+  text-align: left;
 }
 
 header {
@@ -26,6 +27,18 @@ form {
   display: inline-block;
 }
 
+.mfleft {
+  padding-left: 200px;
+  width: 150px;
+  float: left;
+}
+
+.mfright {
+  width: 600px;
+  float: right;
+  padding-left: 10px;
+}
+
 .formleft {
   padding-left: 200px;
   width: 150px;
@@ -37,7 +50,6 @@ form {
 }
 
 .fcbright {
-  display: inline-block;
   width: 300px;
   float: right;
 }
