@@ -6,13 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<div class='header-cont'>
 <header>
   <center>
     <h1>Cookbook App</h1>
     <%= render partial: "layouts/menu" %>
     <br>
+    <br>
   </center>
 </header>
+</div>
 <body>
   <div class='wrap'>
     <%= yield %>

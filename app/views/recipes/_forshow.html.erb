@@ -1,24 +1,25 @@
 <center> 
-<br>
-  <h2><%= @recipe.name %></h2>
-</center>
   <br>
-  <div class='recipeleft'>
+  <div class='headlmr'>
+    <%= link_to("Back", recipes_path, class: "button") %>
+    <h2><%= @recipe.name %></h2>
+    <%= link_to("Edit Recipe", edit_recipe_path(@recipe), class: "button") %> <%= button_to('Delete Recipe', recipe_path(@recipe), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'}) %>
+  </div>
+</center>
+<br>
+<div class='recipeleft'>
   <p><strong>Category:</strong> <%= @recipe.category.try(:name) %></p>
   <p><strong>Vegetarian:</strong> <%= @recipe.vegetarian %></p>
   <p><strong>Ingredients:</strong> <% @recipe.ingredients.each do |ingredient| %>
-                  <%= simple_format ingredient.name %>
-                  <% end %></p>
+    <%= simple_format ingredient.name %>
+    <% end %></p>
   </div>
   <br>
   <center>
     <strong>Instructions:</strong>
   </center>
   <div class='recipemain'>
-  <%= @recipe.instructions %>
+    <%= @recipe.instructions %>
   </div>
   <br>
   <br>
-  <center>
-    <%= link_to("Edit Recipe", edit_recipe_path(@recipe), class: "bueton") %> <%= button_to('Delete Recipe', recipe_path(@recipe), method: :delete, class: 'bueton', data:{confirm: 'Confirm Deleting'}) %>
-  </center>
