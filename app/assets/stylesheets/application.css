@@ -33,14 +33,24 @@ ul {
 
 li {
   display: inline;
+  border: 1px #FFFFFF solid;
+  padding: 5px;
 }
 
-li a {
-  color: #FFFFFF;
+li:hover {
+  border: 2px #FFD100 solid;
+  color: #FFD100;
+  text-decoration: underline;
 }
 
 a {
-color: #FFFFFF;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FFD100;
+  text-decoration: underline;
 }
 
 form {
@@ -106,6 +116,11 @@ form {
   float: right;
 }
 
+.submitform {
+  padding-top:20px;
+  width: 960px;
+}
+
 footer {
   padding-top: 10px;
    position:fixed;
@@ -158,7 +173,7 @@ footer {
 }
 
 .button.back:after {
-  content: '';
+  content: ' ';
   position: absolute;
   height: 50%;
   width: 15px;
@@ -180,7 +195,7 @@ footer {
 }
 
 .button.back:before {
-  content: '';
+  content: ' ';
   position: absolute;
   height: 48%;
   width: 15px;

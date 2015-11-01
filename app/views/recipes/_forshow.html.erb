@@ -12,10 +12,10 @@
 </center>
 <br>
 <div class='recipeleft'>
-  <p><strong>Category:</strong> <%= @recipe.category.try(:name) %></p>
+  <p><strong>Category:</strong> <%= link_to(@recipe.category.try(:name), category_path(@recipe.category)) %></p>
   <p><strong>Vegetarian:</strong> <%= @recipe.vegetarian %></p>
   <p><strong>Ingredients:</strong> <% @recipe.ingredients.each do |ingredient| %>
-    <%= simple_format ingredient.name %>
+    <%= simple_format link_to(ingredient.name, ingredient_path(ingredient)) %>
     <% end %></p>
   </div>
   <br>

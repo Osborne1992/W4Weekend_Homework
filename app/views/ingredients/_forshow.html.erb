@@ -1,6 +1,14 @@
 <center>
   <br>
-  <h2><%= @ingredient.name %></h2>
+  <h2>
+  <div class='headleft'>
+    <%= link_to("Back", ingredients_path, class: "button") %>
+  </div>
+  <%= @ingredient.name %>
+  <div class='headright'>
+    <%= link_to("Edit Ingredient", edit_ingredient_path(@ingredient), class: "button") %> <%= button_to('Delete Ingredient', ingredient_path(@ingredient), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'}) %>
+  </div>
+  </h2>
   <br>
   <% @ingredient.recipes.each do |recipe| %>
   <%= simple_format link_to(recipe.name, recipe_path(recipe)) %>

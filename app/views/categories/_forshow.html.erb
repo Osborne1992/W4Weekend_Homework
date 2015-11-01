@@ -1,6 +1,14 @@
 <center> 
 <br>
-  <h2><%= @category.name %></h2>
+  <h2>
+  <div class='headleft'>
+    <%= link_to("Back", categories_path, class: "button") %>
+  </div>
+    <%= @category.name %>
+    <div class='headright'>
+      <%= link_to("Edit Category", edit_category_path(@category), class: "button") %> <%= button_to('Delete Category', category_path(@category), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'}) %>
+    </div>
+  </h2>
   <br>
   <% @category.recipes.each do |recipe| %>
   <%= simple_format link_to(recipe.name, recipe_path(recipe)) %>
