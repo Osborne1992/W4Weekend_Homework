@@ -1,4 +1,4 @@
-  <h3>
-    <%= link_to("#{ingredient.name}", ingredient_path(ingredient)) %>
+<h3>
+  <%= link_to("#{ingredient.name}", ingredient_path(ingredient)) %>
   <%= link_to(image_tag('http://i.imgur.com/wMD91dX.png', size: "15x15"), edit_ingredient_path(ingredient)) %> <%= button_to('', ingredient_path(ingredient), method: :delete, class: 'imgdelbut', data:{confirm: 'Confirm Deleting'}) %>
-  </h3>
+</h3>
