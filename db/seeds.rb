@@ -16,13 +16,13 @@ Category.create!(name: "Salads")
 Category.create!(name: "Sandwiches")
 
 Recipe.delete_all
-Recipe.create!(name: "Garlic Bread", category_id: 1, vegetarian: true)
-Recipe.create!(name: "Chicken Tikka Masala", category_id: 2, vegetarian: false)
-Recipe.create!(name: "Pumpkin Pie", category_id: 3, vegetarian: true)
-Recipe.create!(name: "Apple Slices", category_id: 4, vegetarian: true)
-Recipe.create!(name: "Lentil", category_id: 5, vegetarian: true)
-Recipe.create!(name: "Chicken Caesar", category_id: 6, vegetarian: false)
-Recipe.create!(name: "Marmite", category_id: 7, vegetarian: true)
+Recipe.create!(name: "Garlic Bread", vegetarian: true)
+Recipe.create!(name: "Chicken Tikka Masala", vegetarian: false)
+Recipe.create!(name: "Pumpkin Pie", vegetarian: true)
+Recipe.create!(name: "Apple Slices", vegetarian: true)
+Recipe.create!(name: "Lentil", vegetarian: true)
+Recipe.create!(name: "Chicken Caesar", vegetarian: false)
+Recipe.create!(name: "Marmite", vegetarian: true)
 
 Ingredient.delete_all
 Ingredient.create!(name: "Bread")

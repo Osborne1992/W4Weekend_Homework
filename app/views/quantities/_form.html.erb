@@ -1,0 +1,25 @@
+<%= form_for @quantity do |f| %>
+<div class='mfleft'><%= f.label :recipe_id, "Recipe:" %></div>
+<div class='mfright'>
+<% if @quantity.persisted? %>
+<%= @quantity.recipe.try(:name) %>
+<% else %>
+<%= f.collection_select :recipe_id, Recipe.all, :id, :name %>
+<% end %>
+</div>
+<br>
+<br>
+<div class='mfleft'><%= f.label :ingredient_id, "Ingredient:" %></div>
+<div class='mfright'><%= f.collection_select :ingredient_id, Ingredient.all, :id, :name %></div>
+<br>
+<br>
+<div class='mfleft'><%= f.label :amount, "Amount:" %></div>
+<div class='mfright'><%= f.text_field :amount, size: 70 %></div>
+<br>
+<br>
+<center>
+<div class='submitform'>
+  <%= f.submit button_text, class: "button" %>
+</div>
+</center>
+<% end %>

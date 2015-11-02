@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = find_recipe
   end
 
   def new
@@ -13,27 +13,31 @@ class RecipesController < ApplicationController
   end
 
   def create
-    Recipe.create(recipe_params)
-    redirect_to(recipes_path)
+    recipe = Recipe.create(recipe_params)
+    redirect_to( recipe_path( recipe.id ) )
   end
 
   def destroy
-    recipe = Recipe.find(params[:id])
+    recipe = find_recipe
     recipe.destroy
     redirect_to(recipes_path)
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = find_recipe
   end
 
   def update
-    recipe = Recipe.find(params[:id])
+    recipe = find_recipe
     recipe.update(recipe_params)
-    redirect_to(recipes_path)
+    redirect_to(recipe_path(recipe.id))
   end
 
   private
+
+  def find_recipe
+    Recipe.find(params[:id])
+  end
 
   def recipe_params
     params.require(:recipe).permit(:name, :category_id, :vegetarian, :instructions, { ingredient_ids: [] })

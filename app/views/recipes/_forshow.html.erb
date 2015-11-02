@@ -12,11 +12,16 @@
 </center>
 <br>
 <div class='recipeleft'>
-  <p><strong>Category:</strong> <%= link_to(@recipe.category.try(:name), category_path(@recipe.category)) %></p>
+  <p><strong>Category:</strong> <%= link_to(@recipe.category.name, @recipe.category) if @recipe.category %></p>
   <p><strong>Vegetarian:</strong> <%= @recipe.vegetarian %></p>
-  <p><strong>Ingredients:</strong> <% @recipe.ingredients.each do |ingredient| %>
-    <%= simple_format link_to(ingredient.name, ingredient_path(ingredient)) %>
-    <% end %></p>
+  <p><strong>Ingredients:</strong> 
+    <% @recipe.quantities.each do |quantity| %>
+      <br>
+      <%= quantity.amount %>
+      <%= link_to(quantity.ingredient.name, quantity.ingredient) %>
+      <%= link_to(image_tag('http://i.imgur.com/wMD91dX.png', size: "15x15"), edit_quantity_path(quantity)) %>
+      <% end %>
+  </p>
   </div>
   <br>
   <center>

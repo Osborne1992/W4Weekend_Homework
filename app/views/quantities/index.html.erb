@@ -1,0 +1,18 @@
+<center>
+  <br>
+  <br>
+  <h2>Recipe Ingredient Amounts</h2>
+  <br>
+
+  <% @quantities.each do |q| %>
+    <%= q.amount %> - <%= q.ingredient.try(:name) %> <%= button_to('', quantity_path(q), method: :delete, class: 'imgdelbut', data:{confirm: 'Confirm Deleting'}) %><br>
+  <% end %>
+
+
+</center>
+
+<footer>
+  <center>
+    <%= link_to('New Ingredient Amount', new_quantity_path, class: 'button') %>
+  </center>
+</footer>

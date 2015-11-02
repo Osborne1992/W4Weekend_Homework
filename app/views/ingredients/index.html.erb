@@ -2,7 +2,7 @@
   <br>
   <br>
   <h2>Meal Ingredients</h2>
-  <br>
+  <p><%= link_to('New Ingredient Amount', new_quantity_path, class: 'button') %> <%= link_to("See All Ingredient Amounts", quantities_path, class: "button") %></p>
   <%= render @ingredients %>
 </center>
 

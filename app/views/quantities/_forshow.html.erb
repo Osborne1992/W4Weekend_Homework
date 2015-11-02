@@ -1,0 +1,13 @@
+<center> 
+  <br>
+  <h2>
+  <div class='headleft'>
+    <%= link_to("Back", recipes_path, class: "button") %>
+  </div>
+    <%= @quantity.recipe.name %>
+  <div class='headright'>
+    <%= link_to("Edit Amount", edit_recipe_path(@quantity), class: "button") %> <%= button_to('Delete Amount', recipe_path(@quantity), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'}) %>
+  </div>
+  </h2>
+</center>
+<br>
