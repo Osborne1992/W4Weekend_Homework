@@ -1,13 +1,13 @@
 <center>
   <br>
   <br>
-  <h2>Meal Ingredients</h2>
-  <p><%= link_to('New Ingredient Amount', new_quantity_path, class: 'button') %> <%= link_to("See All Ingredient Amounts", quantities_path, class: "button") %></p>
+  <h1>Ingredients</h1>
+  <br>
   <%= render @ingredients %>
 </center>
 
 <footer>
   <center>
-    <%= link_to('New Ingredient', new_ingredient_path, class: 'button') %>
+    <%= link_to('New Ingredient', new_ingredient_path, class: 'button') %> <%= link_to('Add Ingredient Measurement', new_quantity_path, class: 'button') %> <%= link_to("See All Measurements", quantities_path, class: "button") %>
   </center>
 </footer>

@@ -32,14 +32,6 @@ ul {
 
 li {
   display: inline;
-  border: 1px #FFFFFF solid;
-  padding: 5px;
-}
-
-li:hover {
-  border: 2px #FFD100 solid;
-  color: #FFD100;
-  text-decoration: underline;
 }
 
 a {
@@ -96,14 +88,7 @@ form {
 
 }
 
-.imgdelbut {
-  background: url(http://i.imgur.com/a6rCt68.png);
-  background-size: 15px;
-  background-position: 0px 13px;
-  padding: 15px;
-  background-repeat: no-repeat;
-  border: none;
-}
+
 
 .headleft {
   width: 200px;
@@ -156,6 +141,10 @@ footer {
   background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
   background-image: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
   background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+}
+
+.button del {
+  background: url(http://i.imgur.com/TZjRfjf.png) 15px;
 }
 
 .button:hover {
