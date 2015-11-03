@@ -84,19 +84,13 @@ form {
   float: right;
 }
 
-.ingredientlist {
-
-}
-
-
-
 .headleft {
-  width: 200px;
+  width: 250px;
   float: left;
 }
 
 .headright {
-  width: 200px;
+  width: 250px;
   float: right;
 }
 
@@ -115,6 +109,30 @@ footer {
    background:url(http://i.imgur.com/o9V5qby.jpg) top right no-repeat; background-size: 100%; background-attachment:fixed;
 }
 
+.imgbutton {
+  display: inline-block;
+  position: relative;
+  color: #888;
+  text-shadow: 0 1px 0 rgba(255,255,255, 0.8);
+  text-decoration: none;
+  text-align: center;
+  padding: 2px 3px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: helvetica, arial, sans-serif;
+  border-radius: 4px;
+  border: 1px solid #bcbcbc;
+
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+  background-image: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+  background-image: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+  background-image: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+  background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(239,239,239,1) 60%,rgba(225,223,226,1) 100%);
+}
+
 /*
 * http://www.bypeople.com/one-tag-ios-like-css-buttons/
 * button/button.back by RickMartinez - March 9th 2015
@@ -127,7 +145,7 @@ footer {
   text-decoration: none;
   text-align: center;
   padding: 4px 6px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   font-family: helvetica, arial, sans-serif;
   border-radius: 4px;

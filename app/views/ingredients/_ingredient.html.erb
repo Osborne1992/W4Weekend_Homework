@@ -1,4 +1,4 @@
 <h2>
   <%= link_to("#{ingredient.name}", ingredient_path(ingredient)) %>
-  <%= link_to(image_tag('http://i.imgur.com/PYI7y3E.png', size: "12", class: "button"), edit_ingredient_path(ingredient)) %> <%= link_to(image_tag('http://i.imgur.com/TZjRfjf.png', size: "12", class: 'button'), ingredient_path(ingredient), method: :delete, data:{confirm: 'Confirm Deleting'}) %>
+  <%= link_to(image_tag('http://i.imgur.com/PYI7y3E.png', size: "12", class: "imgbutton"), edit_ingredient_path(ingredient)) %> <%= link_to(image_tag('http://i.imgur.com/TZjRfjf.png', size: "12", class: 'imgbutton'), ingredient_path(ingredient), method: :delete, data:{confirm: 'Confirm Deleting'}) %>
 </h2>

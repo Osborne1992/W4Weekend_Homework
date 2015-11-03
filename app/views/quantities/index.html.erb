@@ -5,7 +5,7 @@
   <br>
 
   <% @quantities.each do |q| %>
-    <%= q.amount %> - <%= q.ingredient.try(:name) %> <%= link_to(image_tag("http://i.imgur.com/PYI7y3E.png", size: '9', class: 'button'), quantity_path(q), method: :delete, data:{confirm: 'Confirm Deleting'}) %><br>
+    <%= q.amount %> - <%= q.ingredient.try(:name) %> <%= link_to(image_tag("http://i.imgur.com/PYI7y3E.png", size: '9', class: 'imgbutton'), quantity_path(q), method: :delete, data:{confirm: 'Confirm Deleting'}) %><br>
   <% end %>
 
 
