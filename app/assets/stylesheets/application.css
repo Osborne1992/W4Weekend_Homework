@@ -26,6 +26,11 @@ header {
   background:url(http://i.imgur.com/o9V5qby.jpg) top right no-repeat; background-size: 100%; background-attachment:fixed;
 }
 
+.content {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
