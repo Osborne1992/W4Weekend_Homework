@@ -13,8 +13,8 @@ class QuantitiesController < ApplicationController
   end
 
   def create
-    quantity = Quantity.create(quantity_params)
-    redirect_to( quantity_path( quantity.id ) )
+    Quantity.create(quantity_params)
+    redirect_to(quantities_path)
   end
 
   def destroy
