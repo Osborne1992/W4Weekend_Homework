@@ -1,5 +1,12 @@
 <nav>
   <ul>
+    <li>
+      <% if user_signed_in? %>
+        <%= link_to 'logout', destroy_user_session_path, method: :delete, class: "button" %>
+      <% else %>
+        <%= link_to 'login', new_user_session_path, class: "button" %> | <%= link_to 'register', new_user_registration_path, class: "button" %>
+      <% end %>
+    </li>
     <li><%= link_to("Categories", categories_path, class: "button") %></li>
     <li><%= link_to("Recipes", recipes_path, class: "button") %></li>
     <li><%= link_to("Ingredients", ingredients_path, class: "button") %></li>

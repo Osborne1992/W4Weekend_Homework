@@ -4,9 +4,11 @@
   <div class='headleft'>
     <%= link_to("Back", categories_path, class: "button") %>
   </div>
+  <div class='headmid'>
     <%= @category.name %>
+  </div>
     <div class='headright'>
-      <%= link_to("Edit Category", edit_category_path(@category), class: "button") %> <%= button_to('Delete Category', category_path(@category), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'}) %>
+      <%= link_to "Edit Category", edit_category_path(@category), class: "button" if can? :edit, @category %> <%= link_to 'Delete Category', category_path(@category), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'} if can? :destroy, @category %>
     </div>
   </h2>
   <br>

@@ -4,12 +4,16 @@
   <div class='headleft'>
     <%= link_to("Back", recipes_path, class: "button") %>
   </div>
+  <div class='headmid'>
     <%= @recipe.name %>
+  </div>
   <div class='headright'>
-    <%= link_to("Edit Recipe", edit_recipe_path(@recipe), class: "button") %> <%= button_to('Delete Recipe', recipe_path(@recipe), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'}) %>
+    <%= link_to "Edit Recipe", edit_recipe_path(@recipe), class: "button" if can? :edit, @recipe %> <%= link_to 'Delete Recipe', recipe_path(@recipe), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'} if can? :destroy, @recipe %>
   </div>
   </h2>
 </center>
+<br>
+<br>
 <br>
 <div class='recipeleft'>
   <p><strong>Category:</strong> <%= link_to(@recipe.category.name, @recipe.category) if @recipe.category %></p>

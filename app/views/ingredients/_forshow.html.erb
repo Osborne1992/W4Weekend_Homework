@@ -4,9 +4,11 @@
   <div class='headleft'>
     <%= link_to("Back", ingredients_path, class: "button") %>
   </div>
+  <div class='headmid'>
   <%= @ingredient.name %>
+  </div>
   <div class='headright'>
-    <%= link_to("Edit Ingredient", edit_ingredient_path(@ingredient), class: "button") %> <%= button_to('Delete Ingredient', ingredient_path(@ingredient), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'}) %>
+    <%= link_to "Edit Ingredient", edit_ingredient_path(@ingredient), class: "button" if can? :edit, @ingredient %> <%= link_to 'Delete Ingredient', ingredient_path(@ingredient), method: :delete, class: 'button', data:{confirm: 'Confirm Deleting'} if can? :edit, @category %>
   </div>
   </h2>
   <br>

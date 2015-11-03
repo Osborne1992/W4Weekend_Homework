@@ -13,6 +13,6 @@
 
 <footer>
   <center>
-    <%= link_to('New Ingredient Amount', new_quantity_path, class: 'button') %>
+    <%= link_to 'New Ingredient Amount', new_quantity_path, class: 'button' if can? :create, Quantity %>
   </center>
 </footer>

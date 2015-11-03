@@ -8,6 +8,6 @@
 
 <footer>
   <center>
-    <%= link_to('New Ingredient', new_ingredient_path, class: 'button') %> <%= link_to('Add Ingredient Measurement', new_quantity_path, class: 'button') %> <%= link_to("See All Measurements", quantities_path, class: "button") %>
+    <%= link_to 'New Ingredient', new_ingredient_path, class: 'button' if can? :create, Ingredient %> <%= link_to 'Add Ingredient Measurement', new_quantity_path, class: 'button' if can? :create, Quantity %> <%= link_to("See All Measurements", quantities_path, class: "button") %>
   </center>
 </footer>

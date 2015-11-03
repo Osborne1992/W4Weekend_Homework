@@ -8,6 +8,6 @@
 
 <footer>
   <center>
-    <%= link_to('New Recipe', new_recipe_path, class: 'button') %>
+    <%= link_to 'New Recipe', new_recipe_path, class: 'button' if can? :create, Recipe %>
   </center>
 </footer>

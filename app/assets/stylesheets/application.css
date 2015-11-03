@@ -4,6 +4,7 @@ body {
   width: 100%;
   background:url(http://i.imgur.com/o9V5qby.jpg) top right no-repeat; background-size: 100%; background-attachment:fixed;
   color: #FFFFFF;
+  text-shadow: 2px 2px #000000;
 }
 
 .wrap {
@@ -69,6 +70,10 @@ form {
   padding-left: 10px;
 }
 
+.mfright.cb {
+  display: table-row;
+}
+
 .formleft {
   padding-left: 200px;
   width: 150px;
@@ -87,6 +92,10 @@ form {
 .headleft {
   width: 250px;
   float: left;
+}
+.headmid {
+  width: 460px;
+  float:left;
 }
 
 .headright {

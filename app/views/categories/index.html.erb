@@ -9,6 +9,6 @@
 
 <footer>
   <center>
-    <%= link_to("Add Category", new_category_path, class: 'button') %>
+    <%= link_to "Add Category", new_category_path, class: 'button' if can? :create, Category %>
   </center>
 </footer>

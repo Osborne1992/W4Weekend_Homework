@@ -13,7 +13,7 @@
 <br>
 
 <div class='mfleft'><%= f.label :ingredient_ids, "Ingredients:" %></div>
-<div class='mfright'><%= f.collection_check_boxes :ingredient_ids, Ingredient.all.order(:name), :id, :name %></div>
+<div class='mfright cb'><%= f.collection_check_boxes :ingredient_ids, Ingredient.all.order(:name), :id, :name %></div>
 <br>
 <br>
 <br>
