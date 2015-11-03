@@ -6,14 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <div class='header-cont'>
-<header>
-  <center>
-    <img alt="CookBook App" src="http://i.imgur.com/aI0GGRW.png" />
-    <%= render partial: "layouts/menu" %>
-  </center>
-  <br>
-</header>
+  <header>
+    <center>
+      <img alt="CookBook App" src="http://i.imgur.com/aI0GGRW.png" />
+      <%= render partial: "layouts/menu" %>
+    </center>
+    <br>
+  </header>
 </div>
 <br>
 <body>
