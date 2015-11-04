@@ -16,13 +16,13 @@ Category.create!(name: "Salads")
 Category.create!(name: "Sandwiches")
 
 Recipe.delete_all
-Recipe.create!(name: "Garlic Bread", vegetarian: true)
-Recipe.create!(name: "Chicken Tikka Masala", vegetarian: false)
-Recipe.create!(name: "Pumpkin Pie", vegetarian: true)
-Recipe.create!(name: "Apple Slices", vegetarian: true)
-Recipe.create!(name: "Lentil", vegetarian: true)
-Recipe.create!(name: "Chicken Caesar", vegetarian: false)
-Recipe.create!(name: "Marmite", vegetarian: true)
+Recipe.create!(name: "Garlic Bread", vegetarian: true, instructions: "Take some bread, spread garlic butter on the slices, pop in oven for 5-10 minutes on 180 C.")
+Recipe.create!(name: "Chicken Tikka Masala", vegetarian: false, instructions: "Brown some chicken, add diced onions, boil some rice, serve.")
+Recipe.create!(name: "Pumpkin Pie", vegetarian: true, instructions: "Take a pumpking, make a pie.")
+Recipe.create!(name: "Apple Slices", vegetarian: true, instructions: "Slice apples. Did you really need this for that?")
+Recipe.create!(name: "Lentil", vegetarian: true, instructions: "Buy it from a shop. It would be easier.")
+Recipe.create!(name: "Chicken Caesar", vegetarian: false, instructions: "Add cooked diced chicken to a caesar salad.")
+Recipe.create!(name: "Marmite", vegetarian: true, instructions: "GLORIOUS MARMITE! SPREAD BUTTER ON BREAD, ADD MARMITE! PRAISE BE UNTO MARMITE")
 
 Ingredient.delete_all
 Ingredient.create!(name: "Bread")
@@ -31,3 +31,7 @@ Ingredient.create!(name: "Tomato")
 Ingredient.create!(name: "Chicken")
 Ingredient.create!(name: "Marmite")
 Ingredient.create!(name: "Pumpkin")
+
+['registered', 'banned', 'moderator', 'admin'].each do |role|
+  Role.find_or_create_by({name: role})
+end

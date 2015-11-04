@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise'
 gem 'cancancan', '1.10'
+gem 'carrierwave'
+gem 'rmagick'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
