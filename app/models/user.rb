@@ -6,11 +6,13 @@ class User < ActiveRecord::Base
 
   belongs_to :role
 
+  has_many :recipes, foreign_key: :creator_id
+
   before_create :set_default_role
 
 
   def role?(role_to_compare_to)
-    role_to_compare_to.to_s == self.role.to_s
+    role_to_compare_to.to_s == self.role.try(:name).to_s
   end
 
   private

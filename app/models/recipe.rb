@@ -5,6 +5,7 @@ class Recipe < ActiveRecord::Base
   has_many :ingredients, through: :quantities
 
   belongs_to :category
+  belongs_to :creator, class_name: 'User'
 
   validates :name, presence: true
   validates :name, uniqueness: true

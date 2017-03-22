@@ -32,6 +32,9 @@ Ingredient.create!(name: "Chicken")
 Ingredient.create!(name: "Marmite")
 Ingredient.create!(name: "Pumpkin")
 
+User.delete_all
+User.create!(email: "simon@simon.simon", password: "password", role: "admin")
+
 ['registered', 'banned', 'moderator', 'admin'].each do |role|
   Role.find_or_create_by({name: role})
 end

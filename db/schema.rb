@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104112618) do
+ActiveRecord::Schema.define(version: 20151104121101) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 20151104112618) do
     t.boolean  "vegetarian"
     t.text     "instructions"
     t.string   "recipe_image"
+    t.integer  "creator_id"
   end
 
   create_table "roles", force: :cascade do |t|
