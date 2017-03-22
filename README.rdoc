@@ -1,28 +1,4 @@
-== README
+Week 4 Weekend Homework while at CodeClan.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This particular bit of work I was fairly happy with while learning. An application on which you can sign up and add cooking recipes, ingredients, assign categories to recipes and so on.
+Not the best cookbook in the world, but still a nice for what it is during my learning to program.
